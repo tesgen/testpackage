@@ -56,10 +56,17 @@ class TestPackageServiceProvider extends ServiceProvider
      */
     protected function bootForConsole()
     {
+//        // Publishing the configuration file.
+//        $this->publishes([
+//            __DIR__.'/../config/testpackage.php' => config_path('testpackage.php'),
+//        ], 'testpackage.config');
+
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__.'/../config/testpackage.php' => config_path('testpackage.php'),
-        ], 'testpackage.config');
+            __DIR__.'/../archivos/public/public.php' => public_path('public.php'),
+            __DIR__.'/../archivos/resources/resources.php' => resource_path('resources.php'),
+//            __DIR__.'/../config/generator.php' => config_path('generator.php'),
+        ], 'generator.archivos');
 
         // Publishing the views.
         /*$this->publishes([
